@@ -1,0 +1,20 @@
+{% load static from staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Emplea.do - {% block title %} {% endblock title %}</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="{% static "bs/css/bootstrap.min.css" %}" rel="stylesheet">
+	<link href="{% static "bs/css/bootstrap.theme.min.css" %}" rel="stylesheet">
+
+</head>
+<body>
+
+<div class="container">
+<h1>Emplea.do </h1>
+   {% block content %} {% endblock content %}
+<script type='text/javascript' src="{% static "js/jquery.min.js" %}"></script>
+<script type='text/javascript' src="{% static "bs/js/bootstrap.min.js" %}"></script>
+</div>
+</body>
+</html>

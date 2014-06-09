@@ -1,0 +1,9 @@
+{% extends "base.html"%}
+
+{% block title %} {{ job.name }} {% endblock title %}
+
+{% block content %}
+<div>{{ job.pub_date }}</div> 
+ <p>{{ job.description }} </p>
+ <p>{{ job.application }}</p>
+{%endblock content%}
