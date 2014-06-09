@@ -3,7 +3,43 @@
 {% block title %} {{ job.name }} {% endblock title %}
 
 {% block content %}
-<div>{{ job.pub_date }}</div> 
- <p>{{ job.description }} </p>
- <p>{{ job.application }}</p>
+<div class="span1"></div>
+    <div class="span10">
+<div class="row">
+  <span class="page-header">
+    <h2>{{ job.name }}</h2>
+  </span>
+</div>
+<div class="row">
+  <div class="span8">
+    <span class="lead">{{ job.company_name }}</span><span class="muted">, {{ job.place }}</span>
+    <br>
+    <a href="{{ job.url }}" target="_blank">{{ job.url }}</a><br>
+    <span class="muted"><small>{{ job.pub_date }}</small></span>
+
+  </div>
+</div>
+<hr>
+
+<br>
+<div class="row">
+  <div class="span7">
+      <span >
+
+        <div><br></div>
+        <div>
+        	<p>{{ job.description }}</p>
+        </div>
+      </span>
+  </div>
+  
+  <div class="span2">
+<div class="row">
+  <div class="hero-unit">
+    <h3>Para aplicar para esta posici&oacuten</h3>
+
+    <p>{{ job.application }}</p>
+  </div>
+
+</div>
 {%endblock content%}

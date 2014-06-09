@@ -2,12 +2,19 @@
 {% block title %} Lista de trabajos {% endblock title %}
 
 {% block content %}
+<div class="span6">
+    <a class="btn btn-primary pull-center" href="/job/new">Publica una Oferta</a>
+</div>
+<br />
+<div>
 <table class="table table-hover">
  {% for job in job_list %}
-<tr class="blank">
+ <tr class="blank">
           <td style="text-align: center;">
-          </td> <td style="vertical-align: middle;"><strong><a href="{{ job.get_absolute_url }}"> {{ job.name }}</a></strong> - <span class="muted"> {{ job.place }}</span> - {{ job.category.name }}</td> <td>&nbsp;</td>
-</tr>
+            <td> <td style="vertical-align: middle;"><strong><a href="{{ job.get_absolute_url }}"> {{ job.name }}</a></strong> </strong> - <span class="muted">{{ job.place }} </span> @ {{ job.company_name }} </td> <td>&nbsp;</td>
+        </tr>
  {% endfor %}
 </table> 
+	
+</div>
 {% endblock %}

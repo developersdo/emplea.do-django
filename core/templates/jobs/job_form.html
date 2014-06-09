@@ -1,0 +1,14 @@
+{% extends "base.html"%}
+{% block title %} {% endblock title %}
+{% block content %} 
+<form method="post" action=".">{% csrf_token %} 
+                {% for field in form %}
+                <div class="form-group">
+                        {{ field.label_tag }} {{ field }}
+                        {{ field_errors }}
+                </div>
+                {% endfor %}
+            <button type="submit" class="btn">Sube tu Oferta</button>
+</form>
+{% endblock content %}
+
