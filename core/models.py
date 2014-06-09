@@ -13,9 +13,9 @@ class Job(models.Model):
     place = models.CharField(max_length=200)
     description = models.TextField()
     applies = models.TextField()
-    pub_date = models.DateTimeField(auto_add_now=True)
+    pub_date = models.DateTimeField(auto_now_add=True)
 
-    def __unicode__(self)
+    def __unicode__(self):
         return self.name
 
 class Company(models.Model):
@@ -23,10 +23,10 @@ class Company(models.Model):
     slug = models.SlugField(max_length=200)
     url = models.URLField()
     email = models.EmailField()
-    logo = models.ImageField(upload_to=images/logos)
+    logo = models.ImageField(upload_to="images/logos")
     
-   def __unicode__(self):
-       return self.name
+    def __unicode__(self):
+        return self.name
     
 
 
